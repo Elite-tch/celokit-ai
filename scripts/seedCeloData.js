@@ -73,6 +73,7 @@ const celoDocumentationUrls = [
   "https://docs.celo.org/protocol/consensus/validator-guide",
   "https://docs.celo.org/celo-codebase/protocol/transactions/gas-pricing",
   "https://docs.celo.org/celo-codebase/protocol/identity",
+  'https://celokit-ai.vercel.app/celokit-wallet-docs'
 ];
 
 // Scrape documentation pages

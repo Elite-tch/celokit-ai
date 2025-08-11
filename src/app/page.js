@@ -3,7 +3,7 @@
 import React, { useRef, useEffect, useState } from 'react';
 import * as THREE from 'three';
 import { Code,  StepForward } from 'lucide-react';
-
+import Link from 'next/link';
 // Mock FloatingChatButton component
 
 
@@ -256,19 +256,22 @@ export default function Home() {
 
         {/* CTA Buttons */}
         <div className={`flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-6 mb-16 transition-all duration-1000 delay-700 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+         <Link href='/celokit-wallet-demo'>  
           <button className="group relative w-60 md:w-fit flex justify-center px-5 py-4 bg-gradient-to-r from-green-600 to-[#ffff57] text-black font-bold rounded-full shadow-2xl hover:shadow-green-500/25 transition-all duration-300 hover:scale-110 active:scale-95 overflow-hidden">
             <span className="relative flex items-center  space-x-3">
               <StepForward className="w-5 h-5" />
               <span>Try Demo</span>
             </span>
-          </button>
+          </button></Link>
 
+          <Link href='/celokit-wallet-docs'>
           <button className="px-5 py-4  w-60 md:w-fit flex justify-center backdrop-blur-sm text-white font-bold rounded-full border border-white/20  hover:border-white/40 transition-all duration-300 hover:scale-105 active:scale-95 shadow-2xl">
             <span className="flex items-center space-x-3">
               <Code className="w-5 h-5" />
               <span>View Docs</span>
             </span>
           </button>
+          </Link>
         </div>
 
 
