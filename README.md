@@ -1,0 +1,2 @@
+# celokit-ai
+CeloKit-AI is an AI-powered developer toolkit designed to accelerate Celo blockchain development. It includes an intelligent assistant for answering ecosystem-related questions, a code generator optimized for Celo smart contracts and dApps, and interactive demos to help developers build faster with confidence.
