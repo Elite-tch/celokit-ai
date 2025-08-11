@@ -36,7 +36,7 @@ export function Navbar() {
     }
   ];
   
-  // Close dropdown when clicking outside
+  // Close dropdown when clicking outsidegiy 
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (isContactOpen && !event.target.closest('.contact-dropdown')) {
