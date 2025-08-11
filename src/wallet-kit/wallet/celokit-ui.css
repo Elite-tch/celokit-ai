@@ -1,0 +1,347 @@
+/* Celo Brand Colors */
+
+
+:root {
+    --celo-green: #35D07F;
+    --celo-dark-green: #1E8F3E;
+    --celo-gold: #ffff57;
+    --celo-dark-gold: #E6A61C;
+    --celo-light: #F5F9FF;
+    --celo-dark: #0A0D17;
+    --celo-gray: #E5E7EB;
+    --celo-dark-gray: #6B7280;
+    --celo-error: #EF4444;
+    --celo-warning: #F59E0B;
+    --celo-success: #10B981;
+  }
+  
+  /* Base Styles */
+  .celokit-container {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: white;
+    background-color: #1e002b;
+   
+  }
+  
+  /* Network Switcher */
+  .celokit-network-switcher {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    gap: 0.75rem;
+    margin: auto;
+  }
+  
+  .celokit-network-buttons {
+    display: flex;
+    gap: 0.75rem;
+  }
+  
+  .celokit-network-btn {
+    padding: 0.625rem 1.25rem;
+    border-radius: 0.5rem;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    flex: 1;
+    text-align: center;
+    font-size: 0.875rem;
+   
+  }
+  .account-info{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 10px;
+  }
+
+  .account-info p{
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--celo-dark-gray);
+  }
+
+  .account-info h2{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+
+  .celokit-network-btn:disabled {
+    cursor: not-allowed;
+   
+  }
+  
+  .celokit-network-btn-primary {
+    background-color: var(--celo-gold);
+    color: var(--celo-dark);
+  }
+  
+  .celokit-network-btn-primary:hover:not(:disabled) {
+    background-color: var(--celo-dark-gold);
+    transform: translateY(-1px);
+  }
+  
+  .celokit-network-btn-secondary {
+    background-color: var(--celo-gold);
+    color: var(--celo-dark);
+    opacity: 0.6;
+  }
+  
+  .celokit-network-btn-secondary:hover:not(:disabled) {
+   
+    opacity: 1;
+  }
+  
+  .celokit-status-message {
+    padding: 0.5rem;
+    border-radius: 0.375rem;
+    font-size: 0.875rem;
+    text-align: center;
+  }
+  
+  .celokit-status-loading {
+    background-color: rgba(251, 204, 92, 0.1);
+    color: var(--celo-dark-gold);
+  }
+  
+  .celokit-status-error {
+    background-color: rgba(239, 68, 68, 0.1);
+    color: var(--celo-error);
+  }
+  
+  /* Send Transaction Form */
+  .celokit-forms {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+
+  .celokit-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  
+    
+  }
+  
+  .celokit-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .celokit-form-label {
+    font-size: 0.875rem;
+    font-weight: 500;
+    
+  }
+  
+  .celokit-form-input {
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--celo-gray);
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    transition: all 0.2s;
+    outline: none;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .celokit-form-input:focus {
+    outline: none;
+    border-color: var(--celo-gold);
+   
+  }
+  
+  .celokit-form-input::placeholder {
+   
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .celokit-balance {
+    position: absolute;
+    right: 2.5rem;
+    top: 70%;
+    transform: translateY(-50%);
+    font-size: 0.75rem;
+    color: var(--celo-dark-gray);
+  }
+  
+  .celokit-submit-btn {
+    padding: 0.75rem 1.5rem;
+    background-color: var(--celo-gold);
+    color: black;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.25s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 50%;
+    margin: auto;
+  }
+  
+  .celokit-submit-btn:hover:not(:disabled) {
+    background-color: var(--celo-gold);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    opacity: 0.8;
+  }
+  
+  .celokit-submit-btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.7;
+  }
+  
+  /* Modal */
+  .celokit-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 50;
+    animation: celokit-fadeIn 0.2s ease-out;
+  }
+  
+  .celokit-modal-content {
+    background-color: white;
+    border-radius: 0.75rem;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 24rem;
+    margin: 1rem;
+    padding: 1.5rem;
+    position: relative;
+    animation: celokit-slideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  
+  .celokit-modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: 0.25rem;
+    border-radius: 0.375rem;
+    color: var(--celo-dark-gray);
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  .celokit-modal-close:hover {
+    background-color: var(--celo-gray);
+    color: var(--celo-dark);
+  }
+  
+  .celokit-modal-icon {
+    margin-bottom: 1rem;
+    display: flex ;
+    justify-content: center;
+  }
+
+  .modal{
+    display: flex ;
+    justify-items: center;
+   justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .modal p{
+    color: black;
+  }
+  
+  .celokit-modal-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--celo-dark);
+    margin-bottom: 0.5rem;
+  }
+  
+  .celokit-modal-description {
+    color: var(--celo-dark-gray);
+    margin-bottom: 1.5rem;
+    font-size: 0.875rem;
+    line-height: 1.5;
+  }
+  
+  .celokit-modal-button {
+    padding: 0.625rem 1.25rem;
+    background-color: var(--celo-gold);
+    color: black;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    width: 100%;
+  }
+  
+  .celokit-modal-button:hover {
+   opacity: 0.7;
+  }
+  
+  /* Animations */
+  @keyframes celokit-fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes celokit-slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 640px) {
+    .celokit-network-buttons {
+      flex-direction: column;
+     
+    }
+
+    .celokit-network-switcher {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        gap: 0.75rem;
+        margin: auto;
+    }
+    
+    .celokit-modal-content {
+      margin: 0.5rem;
+      padding: 1.25rem;
+    }
+
+    .celokit-form {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+    
+      }
+
+      .celokit-forms {
+        max-width: 90%;
+        margin: 0 auto;
+      }
+      
+   .address{
+    width: 90%;
+   }
+
+      .celokit-submit-btn {
+       margin-top: 10px;
+        width: 80%;
+        margin: auto;
+      }
+  }
