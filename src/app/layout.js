@@ -25,6 +25,10 @@ export const metadata = {
     description: 'Build on Celo with AI-powered development tools',
   },
 
+  icons: {
+    icon: '/logo.png',
+  },
+
 }
 
 export default function RootLayout({ children }) {
