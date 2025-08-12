@@ -1405,18 +1405,18 @@ export default config`}
 
                     {/* Troubleshooting Section */}
                     {activeSection === 'troubleshooting' && (
-                        <section className="w-full max-w-none">
+                        <section className="w-full max-w-[90%]">
                         <h2 className="text-2xl md:text-3xl font-bold text-white mb-6 flex items-center">
                           <Shield className="w-6 h-6 md:w-8 md:h-8 text-[#ffff57] mr-3 flex-shrink-0" />
                           Troubleshooting
                         </h2>
                   
-                        <div className="bg-[#1e002b]/30 rounded-xl text-sm md:text-base p-4 md:p-6 border border-gray-700">
+                        <div className="bg-[#1e002b]/30 w-[90%] rounded-xl text-sm md:text-base p-4 md:p-6 border border-gray-700">
                           <h3 className="text-xl md:text-2xl font-semibold text-white mb-4">
                             Common Issues
                           </h3>
                   
-                          <div className="space-y-6">
+                          <div className="space-y-6 ">
                             {/* Wallet Connection Issues */}
                             <div className="bg-[#1e002b]/50 rounded-lg p-3 md:p-4 border border-gray-700">
                               <h4 className="text-base md:text-lg font-semibold text-[#ffff57] mb-2">
@@ -1537,7 +1537,7 @@ export default config`}
                           </div>
                         </div>
                   
-                        <div className="mt-8 text-sm md:text-base text-white bg-[#1e002b]/30 rounded-xl p-4 md:p-6 border border-gray-700">
+                        <div className="mt-8 text-sm w-[90%] md:text-base text-white bg-[#1e002b]/30 rounded-xl p-4 md:p-6 border border-gray-700">
                           <h3 className="text-xl md:text-2xl font-semibold text-white mb-4">
                             Getting Help
                           </h3>
