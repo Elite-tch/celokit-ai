@@ -14,7 +14,7 @@ export default function FloatingChatButton() {
   };
 
   return (
-    <>
+    <div className='bg-red-800'>
       {/* Floating Button */}
       {!isOpen && (
         <button
@@ -39,7 +39,7 @@ export default function FloatingChatButton() {
           className={`fixed z-50 transition-all duration-300 ease-in-out ${
             isMinimized 
               ? 'bottom-8 right-6 w-80 h-16' 
-              : 'md:bottom-3 bottom-0 right-0 md:right-3 w-full h-full md:w-[65%] md:h-[500px]'
+              : 'md:bottom-1 bottom-0 md:top-2 right-0 border md:rounded border-gray-500 md:right-0  w-full h-full md:w-[65%] md:max-h-[570px] '
           }`}
         >
           <div className="bg-[#1e002b]  w-full md:rounded-lg shadow-2xl border border-gray-800 h-full flex flex-col overflow-hidden">
@@ -105,6 +105,6 @@ export default function FloatingChatButton() {
           </div>
         </div>
       )}
-    </>
+    </div>
   );
 }

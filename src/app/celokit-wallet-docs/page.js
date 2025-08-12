@@ -1,5 +1,5 @@
 'use client'
-
+import Image from 'next/image';
 import React, { useState, useEffect } from 'react';
 import { Copy, Check, ExternalLink, Zap, Shield, Code, Wallet, ChevronRight, Book, Terminal, Settings,  Menu, X } from 'lucide-react';
 import { Highlight, themes } from 'prism-react-renderer';
@@ -235,7 +235,7 @@ const CeloKitDocs = () => {
                                 <h2 className="md:text-4xl text-3xl font-bold text-white mb-4">
                                     Build on Celo with AI-Powered Tools
                                 </h2>
-                                <p className="md:text-xl text-md text-gray-300 mb-8 max-w-3xl mx-auto">
+                                <p className="md:text-xl text-sm text-gray-300 mb-8 max-w-3xl mx-auto">
                                     CeloKit-AI simplifies Celo blockchain development with pre-built components,
                                     AI assistance, and seamless wallet integration for both Mainnet and Alfajores testnet.
                                 </p>
@@ -269,28 +269,28 @@ const CeloKitDocs = () => {
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                                     <div>
                                         <h4 className="text-lg font-semibold text-[#ffff57] mb-3">🎯 Developer-First</h4>
-                                        <p className="text-gray-300 mb-4">
+                                        <p className="text-gray-300 md:text-base text-sm mb-4">
                                             Built specifically for Celo developers, with components optimized for Celo's unique features
                                             like stable coins (cUSD, cEUR) and mobile-first design.
                                         </p>
                                     </div>
                                     <div>
                                         <h4 className="text-lg font-semibold text-green-600 mb-3">🤖 AI-Enhanced</h4>
-                                        <p className="text-gray-300 mb-4">
+                                        <p className="text-gray-300 md:text-base text-sm-300 mb-4">
                                             Integrated AI tools help generate smart contracts, suggest optimizations,
                                             and provide real-time development assistance.
                                         </p>
                                     </div>
                                     <div>
                                         <h4 className="text-lg font-semibold text-blue-400 mb-3">📱 Mobile-Ready</h4>
-                                        <p className="text-gray-300 mb-4">
+                                        <p className="text-gray-300 md:text-base text-sm mb-4">
                                             Components are designed with mobile-first approach, perfect for Celo's
                                             focus on mobile financial access.
                                         </p>
                                     </div>
                                     <div>
                                         <h4 className="text-lg font-semibold text-purple-400 mb-3">⚡ Performance</h4>
-                                        <p className="text-gray-300 mb-4">
+                                        <p className="text-gray-300 md:text-base text-sm mb-4">
                                             Optimized for fast loading and minimal bundle size, with tree-shaking
                                             support for production builds.
                                         </p>
@@ -309,7 +309,7 @@ const CeloKitDocs = () => {
                             </h2>
 
                             <div className="bg-[#1e002b]/50 rounded-xl p-6 border border-gray-700 mb-8">
-                                <p className="text-gray-300 mb-6">
+                                <p className="text-gray-300 md:text-base text-sm mb-6">
                                     Install CeloKit-AI and its peer dependencies to get started with Celo blockchain development.
                                     The library requires several peer dependencies for wallet connections and blockchain interactions.
                                 </p>
@@ -412,7 +412,7 @@ bun add clsx tailwind-merge`}
                                     <span className="w-8 h-8 bg-gradient-to-r from-[#ffff57] to-green-600 rounded-lg flex items-center justify-center text-gray-900 mr-3 text-lg font-bold">1</span>
                                     Environment Configuration
                                 </h3>
-                                <p className="text-gray-300  mb-4">
+                                <p className="text-gray-300 max-w-[90%]  md:text-base text-sm mb-4">
                                     Create a <code className="bg-[#1e002b] px-2 py-1 rounded text-[#ffff57]">.env.local</code> file
                                     in your project root to configure WalletConnect for proper wallet connections.
                                 </p>
@@ -533,10 +533,10 @@ export function Providers({ children }: ProvidersProps) {
                             {/* Step 3: Layout Setup */}
                             <div className="mb-10">
                                 <h3 className="md:text-2xl text-xl  font-semibold text-white mb-4 flex items-center">
-                                    <span className="w-8 h-8 bg-gradient-to-r from-[#ffff57] to-green-600 rounded-lg flex items-center justify-center text-gray-900 mr-3 text-lg font-bold">3</span>
+                                    <span className="w-8 h-8 bg-gradient-to-r from-[#ffff57] to-green-600 rounded-lg flex items-center justify-center text-gray-900 mr-3 text-lg font-bold">2</span>
                                     Root Layout Setup
                                 </h3>
-                                <p className="text-gray-300 w-[90%] text-md mb-4">
+                                <p className="text-gray-300 w-[90%] md:text-base text-sm mb-4">
                                     Wrap your entire Next.js app with the Providers component in your root layout.
                                     This ensures all pages have access to Web3 functionality.
                                 </p>
@@ -618,10 +618,10 @@ export default function RootLayout({ children }: RootLayoutProps) {
                             {/* Step 4: Basic Usage */}
                             <div className="mb-8">
                                 <h3 className="md:text-2xl text-xl  font-semibold text-white mb-4 flex items-center">
-                                    <span className="w-8 h-8 bg-gradient-to-r from-[#ffff57] to-green-600 rounded-lg flex items-center justify-center text-gray-900 mr-3 text-lg font-bold">4</span>
+                                    <span className="w-8 h-8 bg-gradient-to-r from-[#ffff57] to-green-600 rounded-lg flex items-center justify-center text-gray-900 mr-3 text-lg font-bold">3</span>
                                     Create Your First Page
                                 </h3>
-                                <p className="text-gray-300 mb-4">
+                                <p className="text-gray-300 md:text-base text-sm mb-4">
                                     Now create a page that uses CeloKit-AI components. This example shows a complete homepage
                                     with wallet connection, network switching, and transaction functionality.
                                 </p>
@@ -814,7 +814,7 @@ export default function HomePage() {
                                 <h3 className="md:text-2xl text-xl  font-semibold text-white mb-4">
                                     ConnectButton
                                 </h3>
-                                <p className="text-gray-300 mb-4">
+                                <p className="text-gray-300 max-w-[90%] md:text-base text-sm mb-4">
                                     The ConnectButton component provides a beautiful, customizable button for wallet connection.
                                     It handles all connection states (disconnected, connecting, connected) with built-in UI.
                                 </p>
@@ -881,7 +881,7 @@ function WalletConnect() {
                                     )}
                                 </TabGroup>
 
-                                <div className="mt-6 bg-[#1e002b]/30 rounded-lg p-4 border border-gray-700">
+                                <div className="mt-6 bg-[#1e002b]/30 max-w-[90%] rounded-lg p-4 border border-gray-700">
                                     <h4 className="text-lg font-semibold text-[#ffff57] mb-3">ConnectButton Props</h4>
                                     <div className="overflow-x-auto">
                                         <table className="min-w-full divide-y divide-gray-700">
@@ -889,7 +889,6 @@ function WalletConnect() {
                                                 <tr>
                                                     <th className="px-4 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">Prop</th>
                                                     <th className="px-4 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">Type</th>
-                                                    <th className="px-4 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">Default</th>
                                                     <th className="px-4 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">Description</th>
                                                 </tr>
                                             </thead>
@@ -900,19 +899,19 @@ function WalletConnect() {
                                                 <tr>
                                                     <td className="px-4 py-3 text-sm text-gray-300">className</td>
                                                     <td className="px-4 py-3 text-sm text-gray-300">string</td>
-                                                    <td className="px-4 py-3 text-sm text-gray-300">-</td>
+                                                   
                                                     <td className="px-4 py-3 text-sm text-gray-300">Custom CSS classes</td>
                                                 </tr>
                                                 <tr>
                                                     <td className="px-4 py-3 text-sm text-gray-300">onConnect</td>
                                                     <td className="px-4 py-3 text-sm text-gray-300">(address: string) ={'>'} void</td>
-                                                    <td className="px-4 py-3 text-sm text-gray-300">-</td>
+                                                 
                                                     <td className="px-4 py-3 text-sm text-gray-300">Callback when wallet connects</td>
                                                 </tr>
                                                 <tr>
                                                     <td className="px-4 py-3 text-sm text-gray-300">onDisconnect</td>
                                                     <td className="px-4 py-3 text-sm text-gray-300">() ={'>'} void</td>
-                                                    <td className="px-4 py-3 text-sm text-gray-300">-</td>
+                                                  
                                                     <td className="px-4 py-3 text-sm text-gray-300">Callback when wallet disconnects</td>
                                                 </tr>
                                             </tbody>
@@ -926,7 +925,7 @@ function WalletConnect() {
                                 <h3 className="md:text-2xl text-xl font-semibold text-white mb-4">
                                     NetworkSwitcher
                                 </h3>
-                                <p className="text-gray-300 mb-4">
+                                <p className="text-gray-300 md:text-base text-sm max-w-[90%] mb-4">
                                     The NetworkSwitcher component allows users to switch between supported Celo networks
                                     (Mainnet and Alfajores testnet by default). It includes network validation and automatic
                                     wallet switching.
@@ -989,7 +988,7 @@ function NetworkSelector() {
                                     )}
                                 </TabGroup>
 
-                                <div className="mt-6 bg-[#1e002b]/30 rounded-lg p-4 border border-gray-700">
+                                <div className="mt-6 bg-[#1e002b]/30 max-w-[90%] rounded-lg p-4 border border-gray-700">
                                     <h4 className="text-lg font-semibold text-green-600 mb-3">NetworkSwitcher Props</h4>
                                     <div className="overflow-x-auto">
                                         <table className="min-w-full divide-y divide-gray-700">
@@ -997,7 +996,7 @@ function NetworkSelector() {
                                                 <tr>
                                                     <th className="px-4 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">Prop</th>
                                                     <th className="px-4 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">Type</th>
-                                                    <th className="px-4 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">Default</th>
+             
                                                     <th className="px-4 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">Description</th>
                                                 </tr>
                                             </thead>
@@ -1006,19 +1005,19 @@ function NetworkSelector() {
                                                 <tr>
                                                     <td className="px-4 py-3 text-sm text-gray-300">theme</td>
                                                     <td className="px-4 py-3 text-sm text-gray-300">'light' | 'dark'</td>
-                                                    <td className="px-4 py-3 text-sm text-gray-300">'light'</td>
+                                                   
                                                     <td className="px-4 py-3 text-sm text-gray-300">UI theme for the switcher</td>
                                                 </tr>
                                                 <tr>
                                                     <td className="px-4 py-3 text-sm text-gray-300">className</td>
                                                     <td className="px-4 py-3 text-sm text-gray-300">string</td>
-                                                    <td className="px-4 py-3 text-sm text-gray-300">-</td>
+                                                   
                                                     <td className="px-4 py-3 text-sm text-gray-300">Custom CSS classes</td>
                                                 </tr>
                                                 <tr>
                                                     <td className="px-4 py-3 text-sm text-gray-300">onSwitch</td>
                                                     <td className="px-4 py-3 text-sm text-gray-300">(chain: Chain) ={'>'} void</td>
-                                                    <td className="px-4 py-3 text-sm text-gray-300">-</td>
+                                                    
                                                     <td className="px-4 py-3 text-sm text-gray-300">Callback when network switches</td>
                                                 </tr>
                                             </tbody>
@@ -1032,7 +1031,7 @@ function NetworkSelector() {
                                 <h3 className="md:text-2xl text-xl font-semibold text-white mb-4">
                                     SendTransaction
                                 </h3>
-                                <p className="text-gray-300 mb-4">
+                                <p className="text-gray-300 md:text-base text-sm max-w-[90%] mb-4">
                                     The SendTransaction component provides a complete modal interface for sending tokens
                                     on the Celo network. It includes amount validation, gas estimation, and transaction
                                     status tracking.
@@ -1100,7 +1099,7 @@ function PaymentForm() {
                                     )}
                                 </TabGroup>
 
-                                <div className="mt-6 bg-[#1e002b]/30 rounded-lg p-4 border border-gray-700">
+                                <div className="mt-6 bg-[#1e002b]/30 max-w-[90%] rounded-lg p-4 border border-gray-700">
                                     <h4 className="text-lg font-semibold text-blue-400 mb-3">SendTransaction Props</h4>
                                     <div className="overflow-x-auto">
                                         <table className="min-w-full divide-y divide-gray-700">
@@ -1108,7 +1107,7 @@ function PaymentForm() {
                                                 <tr>
                                                     <th className="px-4 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">Prop</th>
                                                     <th className="px-4 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">Type</th>
-                                                    <th className="px-4 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">Default</th>
+                                                  
                                                     <th className="px-4 py-3 text-left text-xs font-medium text-gray-300 uppercase tracking-wider">Description</th>
                                                 </tr>
                                             </thead>
@@ -1117,19 +1116,19 @@ function PaymentForm() {
                                                 <tr>
                                                     <td className="px-4 py-3 text-sm text-gray-300">className</td>
                                                     <td className="px-4 py-3 text-sm text-gray-300">string</td>
-                                                    <td className="px-4 py-3 text-sm text-gray-300">-</td>
+                       
                                                     <td className="px-4 py-3 text-sm text-gray-300">Custom CSS classes</td>
                                                 </tr>
                                                 <tr>
                                                     <td className="px-4 py-3 text-sm text-gray-300">onComplete</td>
                                                     <td className="px-4 py-3 text-sm text-gray-300">(txHash: string) ={'>'} void</td>
-                                                    <td className="px-4 py-3 text-sm text-gray-300">-</td>
+                                                  
                                                     <td className="px-4 py-3 text-sm text-gray-300">Callback when transaction completes</td>
                                                 </tr>
                                                 <tr>
                                                     <td className="px-4 py-3 text-sm text-gray-300">onError</td>
                                                     <td className="px-4 py-3 text-sm text-gray-300">(error: Error) ={'>'} void</td>
-                                                    <td className="px-4 py-3 text-sm text-gray-300">-</td>
+                                                   
                                                     <td className="px-4 py-3 text-sm text-gray-300">Callback when transaction fails</td>
                                                 </tr>
                                             </tbody>
@@ -1142,7 +1141,7 @@ function PaymentForm() {
 
                     {/* Advanced Usage Section */}
                     {activeSection === 'advanced' && (
-                        <section>
+                        <section className='md:text-base text-sm'>
                             <h2 className="md:text-3xl text-2xl font-bold text-white mb-6 flex items-center">
                                 <Settings className="w-8 h-8 text-[#ffff57] mr-3" />
                                 Advanced Usage
@@ -1153,7 +1152,7 @@ function PaymentForm() {
                                 <h3 className="md:text-2xl text-xl font-semibold text-white mb-4">
                                     Custom Styling
                                 </h3>
-                                <p className="text-gray-300 mb-4">
+                                <p className="text-gray-300 mb-4 max-w-[90%]">
                                     All CeloKit-AI components support custom styling through Tailwind CSS classes or
                                     traditional CSS overrides. The components use a BEM-like naming convention for easy targeting.
                                 </p>
@@ -1234,7 +1233,7 @@ function CustomUI() {
                                 <h3 className="md:text-2xl text-xl font-semibold text-white mb-4">
                                     Standalone Usage (Non-Next.js)
                                 </h3>
-                                <p className="text-gray-300 mb-4">
+                                <p className="text-gray-300 mb-4 max-w-[90%]">
                                     CeloKit-AI can be used in any React application, not just Next.js. Here's how to configure
                                     it for standalone React apps or other frameworks.
                                 </p>
@@ -1328,7 +1327,7 @@ root.render(
                                 <h3 className="md:text-2xl text-xl font-semibold text-white mb-4">
                                     Custom Configuration
                                 </h3>
-                                <p className="text-gray-300 mb-4">
+                                <p className="text-gray-300 mb-4 max-w-[90%]">
                                     For advanced use cases, you can create a custom Wagmi configuration while still using
                                     CeloKit-AI components. This allows for custom chains, connectors, and other low-level settings.
                                 </p>
@@ -1412,7 +1411,7 @@ export default config`}
                                 Troubleshooting
                             </h2>
 
-                            <div className="bg-[#1e002b]/30 rounded-xl p-6 border border-gray-700">
+                            <div className="bg-[#1e002b]/30 rounded-xl max-w-[90%] text-sm md:text-base p-6 border border-gray-700">
                                 <h3 className="md:text-2xl text-xl font-semibold text-white mb-4">
                                     Common Issues
                                 </h3>
@@ -1511,7 +1510,7 @@ export default config`}
                                 </div>
                             </div>
 
-                            <div className="mt-8  text-white bg-[#1e002b]/30 rounded-xl p-6 border border-gray-700">
+                            <div className="mt-8 max-w-[90%] text-sm md:text-base text-white bg-[#1e002b]/30 rounded-xl p-6 border border-gray-700">
                                 <h3 className="md:text-2xl text-xl font-semibold text-white mb-4">
                                     Getting Help
                                 </h3>
@@ -1569,17 +1568,12 @@ export default config`}
             {/* Footer */}
             <footer className="bg-[#1e002b]/80 border-t border-gray-700 py-6">
                 <div className="container mx-auto px-6">
-                    <div className="flex flex-col md:flex-row justify-between items-center">
-                        <div className="flex items-center space-x-2 mb-4 md:mb-0">
-                            <div className="w-8 h-8 bg-gradient-to-r from-[#ffff57] to-green-600 rounded-lg flex items-center justify-center">
-                                <Zap className="w-4 h-4 text-gray-900" />
-                            </div>
-                            <span className="text-lg font-semibold bg-gradient-to-r from-[#ffff57] to-green-600 bg-clip-text text-transparent">
-                                CeloKit-AI
-                            </span>
-                        </div>
+                    <div className="flex flex-col md:flex-row justify-between  items-center">
+                    <div className="flex flex-col">
+              <Image src='/logo.png' alt='logo' width={100} height={100} className='w-33' />
+            </div>
                         <div className="text-sm text-gray-400">
-                            MIT License © {new Date().getFullYear()} elite-tch
+                           Alright Reserved © {new Date().getFullYear()} elite-tch
                         </div>
                     </div>
                 </div>

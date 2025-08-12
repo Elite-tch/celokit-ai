@@ -61,14 +61,14 @@ export default function WalletPage() {
   </p>
 </div>
 
-  <div className="my-6 flex justify-between">
+  <div className="my-6 flex md:flex-row gap-4 flex-col justify-between">
     <button
       onClick={() => setShowModal(false)}
-      className="px-4 py-2 text-sm border bg-[#1e002b] text-white rounded-full  transition-colors"
+      className="px-4 py-3 text-sm border bg-[#1e002b] text-white rounded-full  transition-colors"
     >
       Learn More First
     </button>
-   <div className="border border-[#1e002b] px-3   py-2 rounded-full"> <ConnectButton/>
+   <div className="border border-[#1e002b] px-3  flex items-center justify-center py-2 rounded-full"> <ConnectButton/>
    </div>
   </div>
 </Dialog.Panel>

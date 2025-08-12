@@ -105,7 +105,7 @@ const sendCUSD = async (to, amount) => {
     
     if (demo.type === 'chat') {
       return (
-        <div className=" bg-gray-900 rounded-2xl p-6 shadow-xl border border-blue-500/20 h-64">
+        <div className=" bg-gray-900 md:text-base text-sm rounded-2xl p-6 shadow-xl border border-blue-500/20 md:h-64">
           <div className="flex items-center space-x-2 mb-4 pb-4 border-b border-gray-200 dark:border-gray-700">
             <MessageSquare className="w-5 h-5 text-green-500" />
             <span className="font-semibold text-gray-900 dark:text-white">Ask CeloKit AI</span>
@@ -128,7 +128,7 @@ const sendCUSD = async (to, amount) => {
     
     if (demo.type === 'thinking') {
       return (
-        <div className="bg-gradient-to-br from-purple-50 to-purple-100 dark:from-purple-900/20 dark:to-purple-800/20 rounded-2xl p-6 shadow-xl border border-purple-200 dark:border-purple-700 h-64 flex items-center justify-center">
+        <div className="bg-gradient-to-br from-purple-50 md:text-base text-sm to-purple-100 dark:from-purple-900/20 dark:to-purple-800/20 rounded-2xl p-6 shadow-xl border border-purple-200 dark:border-purple-700 md:h-64 flex items-center justify-center">
           <div className="text-center">
             <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4 animate-pulse">
               <Sparkles className="w-8 h-8 text-purple-100" />
@@ -147,7 +147,7 @@ const sendCUSD = async (to, amount) => {
     
     if (demo.type === 'code') {
       return (
-        <div className="bg-gray-900 rounded-2xl p-6 shadow-xl border border-blue-500/20 h-64 font-mono text-sm">
+        <div className="bg-gray-900 rounded-2xl md:text-base p-6 shadow-xl border border-blue-500/20 md:h-64  font-mono text-sm">
           <div className="flex items-center space-x-2 mb-4">
             <div className="w-3 h-3 bg-red-400 rounded-full"></div>
             <div className="w-3 h-3 bg-yellow-400 rounded-full"></div>
@@ -170,7 +170,7 @@ const sendCUSD = async (to, amount) => {
     
     if (demo.type === 'deploy') {
       return (
-        <div className="bg-gradient-to-br from-purple-50 to-purple-100 dark:from-purple-900/20 dark:to-purple-800/20 rounded-2xl p-6 shadow-xl border border-purple-200 dark:border-purple-700 h-64">
+        <div className="bg-gradient-to-br md:text-base text-sm from-purple-50 to-purple-100 dark:from-purple-900/20 dark:to-purple-800/20 rounded-2xl p-6 shadow-xl border border-purple-200 dark:border-purple-700 md:h-64">
           <div className="flex items-center space-x-2 mb-6">
             <Terminal className="w-5 h-5 text-purple-600" />
             <span className="font-semibold text-gray-900 dark:text-white">Deployment Status</span>
@@ -209,7 +209,7 @@ const sendCUSD = async (to, amount) => {
             <span>How CeloKit AI Works</span>
           </div>
           
-          <h2 className="text-4xl lg:text-6xl  font-black leading-20 text-gray-900 dark:text-white mb-6">
+          <h2 className="text-4xl lg:text-6xl  font-black md:leading-20 text-gray-900 dark:text-white mb-6">
             Build Celo dApps{' '}
             <span className="bg-gradient-to-r from-green-600 to-[#ffff57] bg-clip-text text-transparent">
               Smarter
@@ -217,7 +217,7 @@ const sendCUSD = async (to, amount) => {
             <br />with AI Assistance
           </h2>
           
-          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
+          <p className="md:text-lg text-sm text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
             CeloKit AI is your all-in-one toolkit to connect wallets, check balances, send transactions, and deploy  with AI-powered code generation and guidance.
           </p>
         </div>
@@ -231,11 +231,11 @@ const sendCUSD = async (to, amount) => {
                 </div>
               </div>
               
-              <h3 className="text-3xl lg:text-4xl text-left font-bold text-gray-900 dark:text-white mb-6">
+              <h3 className="text-2xl lg:text-4xl text-left font-bold text-gray-900 dark:text-white mb-2 md:mb-6">
                 {steps[activeStep].title}
               </h3>
               
-              <p className="text-lg text-gray-600 text-left dark:text-gray-300 leading-relaxed mb-8">
+              <p className="md:text-lg text-sm text-gray-600 text-left dark:text-gray-300 leading-relaxed mb-8">
                 {steps[activeStep].description}
               </p>
 
@@ -247,7 +247,7 @@ const sendCUSD = async (to, amount) => {
                 ].map((feature, idx) => (
                   <div key={idx} className="flex items-center space-x-3">
                     <CheckCircle className="w-5 h-5 text-green-500" />
-                    <span className="text-gray-700 dark:text-gray-300">{feature}</span>
+                    <span className="text-gray-700 md:text-base text-sm dark:text-gray-300">{feature}</span>
                   </div>
                 ))}
                 
@@ -258,7 +258,7 @@ const sendCUSD = async (to, amount) => {
                 ].map((feature, idx) => (
                   <div key={idx} className="flex items-center space-x-3">
                     <CheckCircle className="w-5 h-5 text-purple-600" />
-                    <span className="text-gray-700 dark:text-gray-300">{feature}</span>
+                    <span className="text-gray-700 md:text-base text-sm dark:text-gray-300">{feature}</span>
                   </div>
                 ))}
                 
@@ -269,7 +269,7 @@ const sendCUSD = async (to, amount) => {
                 ].map((feature, idx) => (
                   <div key={idx} className="flex items-center space-x-3">
                     <CheckCircle className="w-5 h-5 text-green-600" />
-                    <span className="text-gray-700 dark:text-gray-300">{feature}</span>
+                    <span className="text-gray-700 md:text-base text-sm dark:text-gray-300">{feature}</span>
                   </div>
                 ))}
                 
@@ -280,7 +280,7 @@ const sendCUSD = async (to, amount) => {
                 ].map((feature, idx) => (
                   <div key={idx} className="flex items-center space-x-3">
                     <CheckCircle className="w-5 h-5 text-purple-500" />
-                    <span className="text-gray-700 dark:text-gray-300">{feature}</span>
+                    <span className="text-gray-700 md:text-base text-sm dark:text-gray-300">{feature}</span>
                   </div>
                 ))}
               </div>

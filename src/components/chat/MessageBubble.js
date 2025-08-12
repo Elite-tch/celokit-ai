@@ -276,14 +276,14 @@ export default function MessageBubble({ message, isUser, timestamp }) {
           </div>
 
           {/* Footer with timestamp and copy button */}
-          <div className="flex items-center justify-between mt-3 sm:mt-4 pt-2 sm:pt-3 border-t border-gray-100/20">
+          <div className="flex items-center  justify-between  pt-2 sm:pt-3 border-t border-gray-100/20">
             <span className={`text-xs ${isUser ? 'text-green-600' : 'text-gray-400'}`}>
               {formatTimestamp(timestamp)}
             </span>
             
             <button
               onClick={copyMessage}
-              className={`flex items-center gap-1 px-2 py-1 text-xs rounded transition-colors ${
+              className={`flex items-center ml-4 gap-1 px-2 py-1 text-xs rounded transition-colors ${
                 isUser
                   ? 'text-green-600 hover:bg-green-200'
                   : 'text-gray-400 hover:bg-gray-100 hover:text-gray-600'
