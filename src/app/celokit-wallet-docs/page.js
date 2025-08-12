@@ -158,7 +158,7 @@ const CeloKitDocs = () => {
             <div className="flex ">
             <button
         onClick={toggleMobileMenu}
-        className="fixed top-18 left-4 border-t border-gray-800 z-20 md:hidden mx-auto bg-[#1e002b] w-[95%] pb-4 pt-6 rounded-lg px-2 text-gray-400 hover:text-white  transition-colors"
+        className="fixed top-20 left-4 border-t   border-gray-800 z-40 md:hidden mx-auto bg-[#1e002b] w-[95%] pb-4 pt-3 px-2 text-gray-400 hover:text-white  transition-colors"
         aria-label="Toggle menu"
       >
         {isMobileMenuOpen ? (
@@ -1405,7 +1405,7 @@ export default config`}
 
                     {/* Troubleshooting Section */}
                     {activeSection === 'troubleshooting' && (
-                        <section className='max-w-[90%]'>
+                        <section className='max-w-[90%] mx-auto'>
                             <h2 className="md:text-3xl text-2xl font-bold text-white mb-6 flex items-center">
                                 <Shield className="w-8 h-8 text-[#ffff57] mr-3" />
                                 Troubleshooting
@@ -1566,7 +1566,7 @@ export default config`}
             </div>
 
             {/* Footer */}
-            <footer className="bg-[#1e002b]/80 border-t border-gray-700 py-6">
+            <footer className="bg-[#1e002b]/80 mt-3 border-t border-gray-700 py-6">
                 <div className="container mx-auto px-6">
                     <div className="flex flex-col md:flex-row justify-between  items-center">
                     <div className="flex flex-col">
