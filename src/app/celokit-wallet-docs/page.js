@@ -155,10 +155,10 @@ const CeloKitDocs = () => {
             {/* Header */}
            
 
-            <div className="flex border-t border-gray-800">
+            <div className="flex ">
             <button
         onClick={toggleMobileMenu}
-        className="fixed top-18 left-4 z-20 md:hidden mx-auto bg-[#1e002b] w-[95%] pb-4 pt-6 rounded-lg px-2 text-gray-400 hover:text-white  transition-colors"
+        className="fixed top-18 left-4 border-t border-gray-800 z-20 md:hidden mx-auto bg-[#1e002b] w-[95%] pb-4 pt-6 rounded-lg px-2 text-gray-400 hover:text-white  transition-colors"
         aria-label="Toggle menu"
       >
         {isMobileMenuOpen ? (
