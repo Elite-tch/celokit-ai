@@ -155,7 +155,7 @@ const CeloKitDocs = () => {
             {/* Header */}
            
 
-            <div className="flex">
+            <div className="flex border-t border-gray-800">
             <button
         onClick={toggleMobileMenu}
         className="fixed top-18 left-4 z-20 md:hidden mx-auto bg-[#1e002b] w-[95%] pb-4 pt-6 rounded-lg px-2 text-gray-400 hover:text-white  transition-colors"
@@ -1425,7 +1425,7 @@ export default config`}
                                         <p className="text-gray-300 mb-3">
                                             If you're experiencing wallet connection issues, check these common solutions:
                                         </p>
-                                        <ul className="list-disc pl-6 space-y-2 text-gray-300">
+                                        <ul className="list-disc pl-6 space-y-2 text-gray-300 max-w-[90%]">
                                             <li>
                                                 <strong>Verify WalletConnect Project ID:</strong> Ensure your <code className="bg-[#1e002b] px-1 rounded text-[#ffff57]">NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID</code> is set in your <code className="bg-[#1e002b] px-1 rounded text-[#ffff57]">.env.local</code> file
                                             </li>
