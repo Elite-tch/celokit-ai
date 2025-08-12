@@ -1405,162 +1405,189 @@ export default config`}
 
                     {/* Troubleshooting Section */}
                     {activeSection === 'troubleshooting' && (
-                        <section className='w-[90%]'>
-                            <h2 className="md:text-3xl text-2xl font-bold text-white mb-6 flex items-center">
-                                <Shield className="w-8 h-8 text-[#ffff57] mr-3" />
-                                Troubleshooting
-                            </h2>
-
-                            <div className="bg-[#1e002b]/30 rounded-xl  text-sm md:text-base p-6 border border-gray-700">
-                                <h3 className="md:text-2xl text-xl font-semibold text-white mb-4">
-                                    Common Issues
-                                </h3>
-
-                                <div className="space-y-6">
-                                    {/* Wallet Connection Issues */}
-                                    <div className="bg-[#1e002b]/50 rounded-lg p-4 border border-gray-700">
-                                        <h4 className="text-lg font-semibold text-[#ffff57] mb-2">
-                                            Wallet Connection Errors
-                                        </h4>
-                                        <p className="text-gray-300 mb-3">
-                                            If you're experiencing wallet connection issues, check these common solutions:
-                                        </p>
-                                        <ul className="list-disc pl-6 space-y-2 text-gray-300 max-w-[90%]">
-                                            <li>
-                                                <strong>Verify WalletConnect Project ID:</strong> Ensure your <code className="bg-[#1e002b] px-1 rounded text-[#ffff57]">NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID</code> is set in your <code className="bg-[#1e002b] px-1 rounded text-[#ffff57]">.env.local</code> file
-                                            </li>
-                                            <li>
-                                                <strong>Check Network Support:</strong> Some wallets require explicit chain support. Use <code className="bg-[#1e002b] px-1 rounded text-[#ffff57]">allowedChains</code> prop in <code className="bg-[#1e002b] px-1 rounded text-[#ffff57]">NetworkSwitcher</code>
-                                            </li>
-                                            <li>
-                                                <strong>Test Different Wallets:</strong> Try connecting with multiple wallets (MetaMask, Rainbow, etc.) to isolate the issue
-                                            </li>
-                                        </ul>
-                                        <div className="mt-4 p-3 bg-yellow-900/20 w-[90%] rounded border border-[#ffff57]/30">
-                                            <p className="text-sm text-[#ffff57]">
-                                                <strong>Pro Tip:</strong> Clear your browser's cache and localStorage if you've recently changed your WalletConnect project ID.
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    {/* Transaction Failures */}
-                                    <div className="bg-[#1e002b]/50 rounded-lg p-4 border border-gray-700">
-                                        <h4 className="text-lg font-semibold text-red-400 mb-2">
-                                            Transaction Failures
-                                        </h4>
-                                        <p className="text-gray-300 mb-3">
-                                            Transactions may fail for several reasons. Here's how to debug:
-                                        </p>
-                                        <ul className="list-disc pl-6 space-y-2 text-gray-300">
-                                            <li>
-                                                <strong>Check Network:</strong> Ensure you're on the correct network (Mainnet vs Alfajores)
-                                            </li>
-                                            <li>
-                                                <strong>Verify Gas Fees:</strong> Celo transactions require CELO for gas, even when sending stablecoins
-                                            </li>
-                                            <li>
-                                                <strong>Insufficient Balance:</strong> Check that the wallet has enough of the token being sent
-                                            </li>
-                                            <li>
-                                                <strong>Use <code className="bg-[#1e002b] px-1 rounded text-[#ffff57]">onError</code> callback:</strong> Implement error handling to get specific failure reasons
-                                            </li>
-                                        </ul>
-                                        <div className="mt-4">
-                                            <CodeBlock
-                                                id="error-handling"
-                                                language="javascript"
-                                                title="Error Handling Example"
-                                                description="Implement transaction error handling"
-                                                code={`<SendTransaction
-  onError={(error) => {
-    console.error('Transaction failed:', error)
-    // Show user-friendly error message
-    alert(\`Transaction failed: \${error.message}\`)
-  }}
-/>`}
-                                            />
-                                        </div>
-                                    </div>
-
-                                    {/* Component Rendering Issues */}
-                                    <div className="bg-[#1e002b]/50 rounded-lg p-4 border border-gray-700">
-                                        <h4 className="text-lg font-semibold text-blue-400 mb-2">
-                                            Component Rendering Problems
-                                        </h4>
-                                        <p className="text-gray-300 mb-3">
-                                            If components aren't rendering correctly:
-                                        </p>
-                                        <ul className="list-disc pl-6 space-y-2 text-gray-300">
-                                            <li>
-                                                <strong>Check Provider Wrapping:</strong> Ensure your app is properly wrapped with the <code className="bg-[#1e002b] px-1 rounded text-[#ffff57]">Providers</code> component
-                                            </li>
-                                            <li>
-                                                <strong>Verify Client-Side Rendering:</strong> Some components require client-side rendering (use <code className="bg-[#1e002b] px-1 rounded text-[#ffff57]">'use client'</code> directive)
-                                            </li>
-                                            <li>
-                                                <strong>Inspect Console Errors:</strong> Look for errors in browser console that might indicate missing dependencies
-                                            </li>
-                                        </ul>
-                                        <div className="mt-4 p-3 bg-blue-900/20 rounded border border-blue-700">
-                                            <p className="text-sm text-blue-300">
-                                                <strong>Note:</strong> CeloKit-AI components must be rendered within the Wagmi and RainbowKit providers.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="mt-8  text-sm md:text-base text-white bg-[#1e002b]/30 rounded-xl p-6 border border-gray-700">
-                                <h3 className="md:text-2xl text-xl font-semibold text-white mb-4">
-                                    Getting Help
-                                </h3>
-                                <p className="text-gray-300 mb-4">
-                                    If you're still experiencing issues, try these resources:
+                        <section className="w-full max-w-none">
+                        <h2 className="text-2xl md:text-3xl font-bold text-white mb-6 flex items-center">
+                          <Shield className="w-6 h-6 md:w-8 md:h-8 text-[#ffff57] mr-3 flex-shrink-0" />
+                          Troubleshooting
+                        </h2>
+                  
+                        <div className="bg-[#1e002b]/30 rounded-xl text-sm md:text-base p-4 md:p-6 border border-gray-700">
+                          <h3 className="text-xl md:text-2xl font-semibold text-white mb-4">
+                            Common Issues
+                          </h3>
+                  
+                          <div className="space-y-6">
+                            {/* Wallet Connection Issues */}
+                            <div className="bg-[#1e002b]/50 rounded-lg p-3 md:p-4 border border-gray-700">
+                              <h4 className="text-base md:text-lg font-semibold text-[#ffff57] mb-2">
+                                Wallet Connection Errors
+                              </h4>
+                              <p className="text-gray-300 mb-3 text-sm md:text-base">
+                                If you're experiencing wallet connection issues, check these common solutions:
+                              </p>
+                              <ul className="list-disc pl-4 md:pl-6 space-y-2 text-gray-300 text-sm md:text-base">
+                                <li className="break-words">
+                                  <strong>Verify WalletConnect Project ID:</strong> Ensure your{' '}
+                                  <code className="bg-[#1e002b] px-1 rounded text-[#ffff57] text-xs md:text-sm break-all">
+                                    NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID
+                                  </code>{' '}
+                                  is set in your{' '}
+                                  <code className="bg-[#1e002b] px-1 rounded text-[#ffff57] text-xs md:text-sm">
+                                    .env.local
+                                  </code>{' '}
+                                  file
+                                </li>
+                                <li className="break-words">
+                                  <strong>Check Network Support:</strong> Some wallets require explicit chain support. Use{' '}
+                                  <code className="bg-[#1e002b] px-1 rounded text-[#ffff57] text-xs md:text-sm break-all">
+                                    allowedChains
+                                  </code>{' '}
+                                  prop in{' '}
+                                  <code className="bg-[#1e002b] px-1 rounded text-[#ffff57] text-xs md:text-sm">
+                                    NetworkSwitcher
+                                  </code>
+                                </li>
+                                <li>
+                                  <strong>Test Different Wallets:</strong> Try connecting with multiple wallets (MetaMask, Rainbow, etc.) to isolate the issue
+                                </li>
+                              </ul>
+                              <div className="mt-4 p-3 bg-yellow-900/20 rounded border border-[#ffff57]/30">
+                                <p className="text-xs md:text-sm text-[#ffff57]">
+                                  <strong>Pro Tip:</strong> Clear your browser's cache and localStorage if you've recently changed your WalletConnect project ID.
                                 </p>
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                    <a
-                                        href="https://github.com/elite-tch/celokit-ai/issues"
-                                        className="bg-[#1e002b]/50 hover:bg-[#1e002b]/70 rounded-lg p-4 border border-gray-700 flex items-center space-x-3 transition-colors"
-                                    >
-                                        <ExternalLink className="w-5 h-5 text-[#ffff57]" />
-                                        <div>
-                                            <h4 className="font-semibold text-white">GitHub Issues</h4>
-                                            <p className="text-sm text-gray-400">Report bugs and request features</p>
-                                        </div>
-                                    </a>
-                                    <a
-                                        href="https://docs.celo.org"
-                                        className="bg-[#1e002b]/50 hover:bg-[#1e002b]/70 rounded-lg p-4 border border-gray-700 flex items-center space-x-3 transition-colors"
-                                    >
-                                        <Book className="w-5 h-5 text-green-600" />
-                                        <div>
-                                            <h4 className="font-semibold">Celo Documentation</h4>
-                                            <p className="text-sm text-gray-400">Learn about Celo blockchain</p>
-                                        </div>
-                                    </a>
-                                    <a
-                                        href="https://wagmi.sh"
-                                        className="bg-[#1e002b]/50 hover:bg-[#1e002b]/70 rounded-lg p-4 border border-gray-700 flex items-center space-x-3 transition-colors"
-                                    >
-                                        <Code className="w-5 h-5 text-blue-400" />
-                                        <div>
-                                            <h4 className="font-semibold">Wagmi Docs</h4>
-                                            <p className="text-sm text-gray-400">Underlying blockchain library</p>
-                                        </div>
-                                    </a>
-                                    <a
-                                        href="https://www.rainbowkit.com"
-                                        className="bg-[#1e002b]/50 hover:bg-[#1e002b]/70 rounded-lg p-4 border border-gray-700 flex items-center space-x-3 transition-colors"
-                                    >
-                                        <Wallet className="w-5 h-5 text-purple-400" />
-                                        <div>
-                                            <h4 className="font-semibold">RainbowKit Docs</h4>
-                                            <p className="text-sm text-gray-400">Wallet connection library</p>
-                                        </div>
-                                    </a>
-                                </div>
+                              </div>
                             </div>
-                        </section>
+                  
+                            {/* Transaction Failures */}
+                            <div className="bg-[#1e002b]/50 rounded-lg p-3 md:p-4 border border-gray-700">
+                              <h4 className="text-base md:text-lg font-semibold text-red-400 mb-2">
+                                Transaction Failures
+                              </h4>
+                              <p className="text-gray-300 mb-3 text-sm md:text-base">
+                                Transactions may fail for several reasons. Here's how to debug:
+                              </p>
+                              <ul className="list-disc pl-4 md:pl-6 space-y-2 text-gray-300 text-sm md:text-base">
+                                <li>
+                                  <strong>Check Network:</strong> Ensure you're on the correct network (Mainnet vs Alfajores)
+                                </li>
+                                <li>
+                                  <strong>Verify Gas Fees:</strong> Celo transactions require CELO for gas, even when sending stablecoins
+                                </li>
+                                <li>
+                                  <strong>Insufficient Balance:</strong> Check that the wallet has enough of the token being sent
+                                </li>
+                                <li className="break-words">
+                                  <strong>Use{' '}
+                                    <code className="bg-[#1e002b] px-1 rounded text-[#ffff57] text-xs md:text-sm">
+                                      onError
+                                    </code>{' '}
+                                    callback:</strong> Implement error handling to get specific failure reasons
+                                </li>
+                              </ul>
+                              <div className="mt-4 overflow-hidden">
+                                <CodeBlock
+                                  id="error-handling"
+                                  language="javascript"
+                                  title="Error Handling Example"
+                                  description="Implement transaction error handling"
+                                  code={`<SendTransaction
+                    onError={(error) => {
+                      console.error('Transaction failed:', error)
+                      // Show user-friendly error message
+                      alert(\`Transaction failed: \${error.message}\`)
+                    }}
+                  />`}
+                                />
+                              </div>
+                            </div>
+                  
+                            {/* Component Rendering Issues */}
+                            <div className="bg-[#1e002b]/50 rounded-lg p-3 md:p-4 border border-gray-700">
+                              <h4 className="text-base md:text-lg font-semibold text-blue-400 mb-2">
+                                Component Rendering Problems
+                              </h4>
+                              <p className="text-gray-300 mb-3 text-sm md:text-base">
+                                If components aren't rendering correctly:
+                              </p>
+                              <ul className="list-disc pl-4 md:pl-6 space-y-2 text-gray-300 text-sm md:text-base">
+                                <li className="break-words">
+                                  <strong>Check Provider Wrapping:</strong> Ensure your app is properly wrapped with the{' '}
+                                  <code className="bg-[#1e002b] px-1 rounded text-[#ffff57] text-xs md:text-sm">
+                                    Providers
+                                  </code>{' '}
+                                  component
+                                </li>
+                                <li className="break-words">
+                                  <strong>Verify Client-Side Rendering:</strong> Some components require client-side rendering (use{' '}
+                                  <code className="bg-[#1e002b] px-1 rounded text-[#ffff57] text-xs md:text-sm">
+                                    'use client'
+                                  </code>{' '}
+                                  directive)
+                                </li>
+                                <li>
+                                  <strong>Inspect Console Errors:</strong> Look for errors in browser console that might indicate missing dependencies
+                                </li>
+                              </ul>
+                              <div className="mt-4 p-3 bg-blue-900/20 rounded border border-blue-700">
+                                <p className="text-xs md:text-sm text-blue-300">
+                                  <strong>Note:</strong> CeloKit-AI components must be rendered within the Wagmi and RainbowKit providers.
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                  
+                        <div className="mt-8 text-sm md:text-base text-white bg-[#1e002b]/30 rounded-xl p-4 md:p-6 border border-gray-700">
+                          <h3 className="text-xl md:text-2xl font-semibold text-white mb-4">
+                            Getting Help
+                          </h3>
+                          <p className="text-gray-300 mb-4 text-sm md:text-base">
+                            If you're still experiencing issues, try these resources:
+                          </p>
+                          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
+                            <a
+                              href="https://github.com/elite-tch/celokit-ai/issues"
+                              className="bg-[#1e002b]/50 hover:bg-[#1e002b]/70 rounded-lg p-3 md:p-4 border border-gray-700 flex items-center space-x-3 transition-colors"
+                            >
+                              <ExternalLink className="w-4 h-4 md:w-5 md:h-5 text-[#ffff57] flex-shrink-0" />
+                              <div className="min-w-0">
+                                <h4 className="font-semibold text-white text-sm md:text-base">GitHub Issues</h4>
+                                <p className="text-xs md:text-sm text-gray-400">Report bugs and request features</p>
+                              </div>
+                            </a>
+                            <a
+                              href="https://docs.celo.org"
+                              className="bg-[#1e002b]/50 hover:bg-[#1e002b]/70 rounded-lg p-3 md:p-4 border border-gray-700 flex items-center space-x-3 transition-colors"
+                            >
+                              <Book className="w-4 h-4 md:w-5 md:h-5 text-green-600 flex-shrink-0" />
+                              <div className="min-w-0">
+                                <h4 className="font-semibold text-sm md:text-base">Celo Documentation</h4>
+                                <p className="text-xs md:text-sm text-gray-400">Learn about Celo blockchain</p>
+                              </div>
+                            </a>
+                            <a
+                              href="https://wagmi.sh"
+                              className="bg-[#1e002b]/50 hover:bg-[#1e002b]/70 rounded-lg p-3 md:p-4 border border-gray-700 flex items-center space-x-3 transition-colors"
+                            >
+                              <Code className="w-4 h-4 md:w-5 md:h-5 text-blue-400 flex-shrink-0" />
+                              <div className="min-w-0">
+                                <h4 className="font-semibold text-sm md:text-base">Wagmi Docs</h4>
+                                <p className="text-xs md:text-sm text-gray-400">Underlying blockchain library</p>
+                              </div>
+                            </a>
+                            <a
+                              href="https://www.rainbowkit.com"
+                              className="bg-[#1e002b]/50 hover:bg-[#1e002b]/70 rounded-lg p-3 md:p-4 border border-gray-700 flex items-center space-x-3 transition-colors"
+                            >
+                              <Wallet className="w-4 h-4 md:w-5 md:h-5 text-purple-400 flex-shrink-0" />
+                              <div className="min-w-0">
+                                <h4 className="font-semibold text-sm md:text-base">RainbowKit Docs</h4>
+                                <p className="text-xs md:text-sm text-gray-400">Wallet connection library</p>
+                              </div>
+                            </a>
+                          </div>
+                        </div>
+                      </section>
                     )}
                 </main>
             </div>
