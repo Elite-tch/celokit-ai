@@ -1405,13 +1405,13 @@ export default config`}
 
                     {/* Troubleshooting Section */}
                     {activeSection === 'troubleshooting' && (
-                        <section className='max-w-[90%] mx-auto'>
+                        <section className=''>
                             <h2 className="md:text-3xl text-2xl font-bold text-white mb-6 flex items-center">
                                 <Shield className="w-8 h-8 text-[#ffff57] mr-3" />
                                 Troubleshooting
                             </h2>
 
-                            <div className="bg-[#1e002b]/30 rounded-xl max-w-[90%] text-sm md:text-base p-6 border border-gray-700">
+                            <div className="bg-[#1e002b]/30 rounded-xl  text-sm md:text-base p-6 border border-gray-700">
                                 <h3 className="md:text-2xl text-xl font-semibold text-white mb-4">
                                     Common Issues
                                 </h3>
@@ -1510,7 +1510,7 @@ export default config`}
                                 </div>
                             </div>
 
-                            <div className="mt-8 max-w-[90%] text-sm md:text-base text-white bg-[#1e002b]/30 rounded-xl p-6 border border-gray-700">
+                            <div className="mt-8  text-sm md:text-base text-white bg-[#1e002b]/30 rounded-xl p-6 border border-gray-700">
                                 <h3 className="md:text-2xl text-xl font-semibold text-white mb-4">
                                     Getting Help
                                 </h3>
