@@ -1405,7 +1405,7 @@ export default config`}
 
                     {/* Troubleshooting Section */}
                     {activeSection === 'troubleshooting' && (
-                        <section className=''>
+                        <section className='w-[90%]'>
                             <h2 className="md:text-3xl text-2xl font-bold text-white mb-6 flex items-center">
                                 <Shield className="w-8 h-8 text-[#ffff57] mr-3" />
                                 Troubleshooting
