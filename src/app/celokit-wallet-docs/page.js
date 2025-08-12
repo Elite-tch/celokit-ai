@@ -158,13 +158,13 @@ const CeloKitDocs = () => {
             <div className="flex">
             <button
         onClick={toggleMobileMenu}
-        className="fixed top-18 left-4 z-50 md:hidden mx-auto bg-[#1e002b] w-[95%] pb-4 pt-6 rounded-lg px-2 text-gray-400 hover:text-white  transition-colors"
+        className="fixed top-18 left-4 z-20 md:hidden mx-auto bg-[#1e002b] w-[95%] pb-4 pt-6 rounded-lg px-2 text-gray-400 hover:text-white  transition-colors"
         aria-label="Toggle menu"
       >
         {isMobileMenuOpen ? (
           <X className="w-5 h-5" />
         ) : (
-          <Menu className="w-5 h-5" />
+          <div className='flex items-center gap-2'><Menu className="w-5 h-5" /> SideBar</div>
         )}
       </button>
 
@@ -302,7 +302,7 @@ const CeloKitDocs = () => {
 
                     {/* Installation Section */}
                     {activeSection === 'installation' && (
-                        <section>
+                        <section className='max-w-[90%]'>
                             <h2 className="md:text-3xl text-2xl font-bold text-white mb-6 flex items-center">
                                 <Terminal className="w-8 h-8 text-[#ffff57] mr-3" />
                                 Installation
@@ -1405,7 +1405,7 @@ export default config`}
 
                     {/* Troubleshooting Section */}
                     {activeSection === 'troubleshooting' && (
-                        <section>
+                        <section className='max-w-[90%]'>
                             <h2 className="md:text-3xl text-2xl font-bold text-white mb-6 flex items-center">
                                 <Shield className="w-8 h-8 text-[#ffff57] mr-3" />
                                 Troubleshooting
