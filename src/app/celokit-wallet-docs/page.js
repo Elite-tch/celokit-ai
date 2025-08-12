@@ -1436,7 +1436,7 @@ export default config`}
                                                 <strong>Test Different Wallets:</strong> Try connecting with multiple wallets (MetaMask, Rainbow, etc.) to isolate the issue
                                             </li>
                                         </ul>
-                                        <div className="mt-4 p-3 bg-yellow-900/20 rounded border border-[#ffff57]/30">
+                                        <div className="mt-4 p-3 bg-yellow-900/20 w-[90%] rounded border border-[#ffff57]/30">
                                             <p className="text-sm text-[#ffff57]">
                                                 <strong>Pro Tip:</strong> Clear your browser's cache and localStorage if you've recently changed your WalletConnect project ID.
                                             </p>
