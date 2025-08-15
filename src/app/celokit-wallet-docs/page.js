@@ -158,7 +158,7 @@ const CeloKitDocs = () => {
             <div className="flex ">
             <button
         onClick={toggleMobileMenu}
-        className="fixed top-20 left-4 border-t   border-gray-800 z-40 md:hidden mx-auto bg-[#1e002b] w-[95%] pb-4 pt-3 px-2 text-gray-400 hover:text-white  transition-colors"
+        className="fixed top-20  left-4 border-t   border-gray-800 z-40 lg:hidden mx-auto bg-[#1e002b] w-[95%] pb-4 pt-3 md:py-6 px-2 text-gray-400 hover:text-white  transition-colors"
         aria-label="Toggle menu"
       >
         {isMobileMenuOpen ? (
@@ -171,16 +171,16 @@ const CeloKitDocs = () => {
       {/* Mobile Overlay */}
       {isMobileMenuOpen && (
         <div
-          className="fixed inset-0 bg-black/50 z-40 md:hidden"
+          className="fixed inset-0 bg-black/50 z-40 lg:hidden"
           onClick={closeMobileMenu}
         />
       )}
 
                 {/* Sidebar */}
                 <aside
-        className={`w-64 md:bg-[#1e002b]/50 bg-[#1e002b]  border-r  border-gray-700 min-h-screen fixed md:top-28 top-20 left-0 z-40 transform transition-transform duration-300 ease-in-out ${
+        className={`w-64 lg:bg-[#1e002b]/50 bg-[#1e002b]  border-r  border-gray-700 min-h-screen fixed md:top-28 top-20 left-0 z-40 transform transition-transform duration-300 ease-in-out ${
           isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full'
-        } md:translate-x-0`}
+        } lg:translate-x-0`}
       >
         <nav className="p-6 pt-16 md:pt-6">
           <ul className="space-y-2">
@@ -227,7 +227,7 @@ const CeloKitDocs = () => {
       </aside>
 
                 {/* Main Content */}
-                <main className="flex-1 px-4 pt-42 md:p-8 md:ml-80 md:max-w-4xl ">
+                <main className="flex-1 px-4 pt-42 md:pt-32 lg:p-8 lg:ml-80 lg:max-w-4xl ">
                     {/* Overview Section */}
                     {activeSection === 'overview' && (
                         <section>
@@ -400,7 +400,7 @@ bun add clsx tailwind-merge`}
 
                     {/* Setup Section */}
                     {activeSection === 'setup' && (
-                        <section className=''>
+                        <section className='md:w-[90%] lg:w-full'>
                             <h2 className="md:text-3xl text-2xl font-bold text-white mb-6 flex items-center">
                                 <Zap className="w-8 h-8 text-[#ffff57] mr-3" />
                                 Quick Setup
