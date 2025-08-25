@@ -1,8 +1,10 @@
+
 'use client'
 
 import React, { useRef, useEffect, useState } from 'react';
 import * as THREE from 'three';
 import { Code,  StepForward } from 'lucide-react';
+import InstallationSection from '@/components/landingpage/Codeblock';
 import Link from 'next/link';
 // Mock FloatingChatButton component
 
@@ -229,33 +231,30 @@ export default function Home() {
   }, []);
 
   return (
-    <div className='bg-[#1e002b]'>
+    <div className='bg-[#1e002b] min-w-screen'>
       {/* 3D Background */}
       <div className="fixed inset-0 overflow-hidden">
         <ThreeJSBackground />
-        <div className="absolute inset-0 bg-gradient-to-br from-black/20 via-transparent to-black/40"></div>
+        <div className="absolute min-w-screen inset-0 bg-gradient-to-br from-black/20 via-transparent to-black/40"></div>
       </div>
 
       {/* Hero Section */}
-      <div className="relative min-h-screen pt-24 md:pt-0 max-w- mx-auto flex flex-col items-center justify-center px-4 text-center z-10">
+      <div className="relative min-h-screen pt-24 md:pt-24 max-w- mx-auto flex flex-col items-center justify-center px-4 text-center z-10">
 
         {/* Main Heading */}
-        <h1 className={`text-4xl md:text-6xl  lg:text-7xl font-black text-white mb-8 transition-all duration-1000 delay-300 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          Build Smarter  with  <span className="bg-gradient-to-r from-green-600 to-[#ffff57] bg-clip-text text-transparent"> 
-             CeloKit-AI
+        <h1 className={`text-4xl md:text-6xl  lg:text-6xl font-black text-white mb-8 transition-all duration-1000 delay-300 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+        Build on Celo <span className="bg-gradient-to-r from-green-600 to-[#ffff57] bg-clip-text text-transparent"> 
+        Without the Hassle
           </span>
-            
-         
         </h1>
 
         {/* Subheading */}
-        <p className={` md:text-md text-gray-200 max-w-4xl mx-auto mb-12 leading-relaxed transition-all duration-1000 delay-500 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          The intelligent toolkit for Celo developers  AI-generated code, instant answers, and seamless wallet integration
-          to accelerate your dApp development.
+        <p className={` md:text-lg text-gray-200 max-w-4xl mx-auto mb-12 leading-relaxed transition-all duration-1000 delay-500 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+        Skip Wagmi, RainbowKit, and Viem. With celokit-ai, you get instant wallet integration and AI-powered developer tools, all in one package.
         </p>
 
         {/* CTA Buttons */}
-        <div className={`flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-6 mb-16 transition-all duration-1000 delay-700 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+        <div className={`flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-6 mb-8 transition-all duration-1000 delay-700 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
          <Link href='/celokit-wallet-demo'>  
           <button className="group relative w-60 md:w-fit flex justify-center px-5 py-4 bg-gradient-to-r from-green-600 to-[#ffff57] text-black font-bold rounded-full shadow-2xl hover:shadow-green-500/25 transition-all duration-300 hover:scale-110 active:scale-95 overflow-hidden">
             <span className="relative flex items-center  space-x-3">
@@ -273,7 +272,7 @@ export default function Home() {
           </button>
           </Link>
         </div>
-
+        <InstallationSection/>
 
       </div>
 
